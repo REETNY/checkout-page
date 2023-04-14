@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+label{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 0px;
+    background-image: url(/BG/checkout.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.checkOutCont{
+    width: 50%;
+    height: auto;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 3px 2.5px rgb(0, 0, 0,.4);
+    padding: 50px 25px 30px 25px;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: 50px;
+}
+
+/* credit card design */
+
+.cardCont{
+    position: absolute;
+    width: 70%;
+    height: 230px;
+    left: 50%;
+    transform: translate(-50%, -250px);
+    border-radius: 20px;
+    background: transparent;
+    perspective: 900px;
+    /* display: none; */
+}
+
+.eachSide{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    position: relative;
+    transition: transform 1s ease-out;
+    transform-style: preserve-3d;
+}
+
+/* front view of credit card */
+.frontView{
+    width: 100%;
+    height: 100%;
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    padding: 30px 35px;
+    box-shadow: 0px 0px 3.5px 2px rgb(0, 0, 0, .4);
+}
+
+.caret{
+    position: absolute;
+    bottom: 50%;
+    top: 50%;
+    left: 10px;
+    font-size: 19px;
+}
+
+.cardDesign{
+    position: absolute;
+    right: 30px;
+    bottom: 40%;
+    font-size: 30px;
+    font-weight: 900;
+    background: linear-gradient(
+        to right,
+        #0465be 20%,
+        rgb(250, 79, 0) 30%,
+        #cd011c 70%,
+        #56da4a 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* text-fill-color: transparent; */
+    background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.cardType{
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: fit-content;
+    display: flex;
+    column-gap: 5px;
+
+}
+
+.cardLogo{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.blackCover{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, .4);
+}
+
+.cardLogo img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.emvLogo{
+    width: 40px;
+    height: 40px;
+}
+
+.logo{
+    width: 100%;
+    height: 100%;
+}
+
+.cardNum, .vadility,
+.cardUser{
+    margin-top: 15px;
+}
+
+.cardNum{
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.creditNum{
+    display: flex;
+    column-gap: 20px;
+}
+
+.small{
+    font-size: 10px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.userName{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* back view of card */
+.backView{
+    width: 100%;
+    height: 100%;
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 20px;
+    padding: 30px 35px;
+    box-shadow: 0px 0px 3.5px 2px rgb(0, 0, 0, .4);
+}
+
+.blackStripe{
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background: black;
+    left: 0;
+}
+
+.authorised{
+    margin-top: 50px;
+    display: flex;
+    column-gap: 10px;
+}
+
+.autorise{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.valid{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.halfStripe{
+    margin-top: 30px;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.Hstripe{
+    flex-basis: 45%;
+    height: 100%;
+    background: gray;
+}
+
+.cvvEntry{
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+}
+
+/* .cardCont:hover .eachSide{
+    transform: rotateY(180deg);
+} */
+
+.turnCard{
+    transform: rotateY(180deg);
+}
+
+
+
+/* card form */
+
+.cardEntry{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.cardNumber,
+.cardHolder{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.cardHolder input, .cardNumber input{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background: transparent;
+    box-shadow: 0px 0px 2px 2.5px rgb(128, 128, 128, .5);
+    padding: 5px 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+.cardNumber input{
+    letter-spacing: 1.5px;
+}
+
+.cardHolder input{
+    letter-spacing: 1px;
+}
+
+.flexbox{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.expiryMonth,
+.expiryYear,
+.cvv{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    align-items: center;
+    justify-content: center;
+    row-gap: 8px;
+}
+
+#expiryMonth,
+#expiryYear,
+#cvv{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background: none;
+    box-shadow: 0px 0px 2px 2.5px rgb(128, 128, 128, .5);
+    outline: none;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+#cvv{
+    letter-spacing: 2px;
+}
+
+.cardPin{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.cardPin input{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background: transparent;
+    box-shadow: 0px 0px 2px 2.5px rgb(128, 128, 128, .5);
+    padding: 5px 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+#btn{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 2px 3.5px rgba(0,0,0,.3);
+    background-color: #f842a9;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 550px){
+    .checkOutCont{
+        width: 95%;
+    }
+
+    .cardCont{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 800px){
+    .checkOutCont{
+        width: 65%;
+    }
+
+    .cardCont{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1000px){
+    .checkOutCont{
+        width: 80%;
+    }
+
+    .cardCont{
+        width: 60%;
+    }
+}

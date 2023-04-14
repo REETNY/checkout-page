@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Payment Gate</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="AJIDE SHAMSIDEEN">
+    <meta name="description" content="checkout page">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+    <script src="https://use.fontawesome.com/7e50d7d663.js"></script>
+</head>
+<body>
+
+    <main>
+
+        <div class="checkOutCont">
+
+            <div class="cardCont">
+                <div class="eachSide">
+                    <!-- front view-->
+                    <div class="frontView">
+
+                        <span class="caret">
+                            <i class="fa fa-caret-left" aria-hidden="true"></i>
+                        </span>
+
+                        <span class="cardDesign">
+                            <i class="fa fa-connectdevelop" aria-hidden="true"></i>
+                        </span>
+
+                        <div class="emvLogo">
+                            <img src="/svg/emv.svg" alt="" class="logo">
+                        </div>
+
+                        <div class="cardNum">
+                            <span class="creditNum">
+                                
+                            </span>
+                        </div>
+
+                        <div class="vadility">
+                            <span class="small">VALID THRU</span>
+                            <span class="expiry">
+                                <span class="ex-month">MM</span>
+                                /
+                                <span class="ex-year">YY</span>
+                            </span>
+                        </div>
+
+                        <div class="cardUser">
+                            <div class="userName">Unknown User</div>
+                        </div>
+                    </div>
+
+                    <div class="cardType">
+                        <span class="cardLogo">
+                            <img src="/cardLogo/mscLogo.png" alt="" class="master" id="logoImg">
+                            <div class="blackCover"></div>
+                        </span>
+                        <span class="cardLogo">
+                            <img src="/cardLogo/verveLogo.png" alt="" class="verve" id="logoImg">
+                            <div class="blackCover"></div>
+                        </span>
+                        <span class="cardLogo">
+                            <img src="/cardLogo/visaLogo.png" alt="" class="visa" id="logoImg">
+                            <div class="blackCover"></div>
+                        </span>
+                    </div>
+
+                    <!-- back view-->
+                    <div class="backView">
+                        <div class="blackStripe"></div>
+
+                        <div class="authorised">
+                            <span class="autorise">Authorised Signature</span>
+                            <span class="valid">Not Valid Unless Signed</span>
+                        </div>
+
+                        <div class="halfStripe">
+                            <span class="Hstripe"></span>
+                            <span class="cvvEntry">###</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form action="" class="cardEntry">
+
+                <span class="cardNumber">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" maxlength="16" id="cardNumber">
+                </span>
+
+                <span class="cardHolder">
+                    <label for="cardHolder">Card Holder</label>
+                    <input type="text" id="cardHolder">
+                </span>
+
+                <span class="flexbox">
+
+                    <span class="expiryMonth">
+                        <label for="expiryMonth">Expiry MM</label>
+                        <select name="month-input" id="expiryMonth">
+                            <option value="month" selected>Month</option>
+                            <option value="01">Jan</option>
+                            <option value="02">Feb</option>
+                            <option value="03">Mar</option>
+                            <option value="04">Apr</option>
+                            <option value="05">May</option>
+                            <option value="06">Jun</option>
+                            <option value="07">Jul</option>
+                            <option value="08">Aug</option>
+                            <option value="09">Sep</option>
+                            <option value="10">Oct</option>
+                            <option value="11">Nov</option>
+                            <option value="12">Dec</option>
+                        </select>
+                    </span>
+
+                    <span class="expiryYear">
+                        <label for="expiryYear">Expiry YY</label>
+                        <select name="Year-input" id="expiryYear">
+                            <option value="year" selected>Year</option>
+                        </select>
+                    </span>
+                    
+                    <span class="cvv">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" minlength="3" maxlength="4">
+                    </span>
+                </span>
+
+                <span class="cardPin">
+                    <label for="cardPin">Card Pin</label>
+                    <input type="password" maxlength="4">
+                </span>
+
+                <button class="btn" id="btn">checkout</button>
+
+            </form>
+        </div>
+
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+</html>
